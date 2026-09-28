@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1790584655661,
+      "tag": "0000_wooden_starfox",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1790587142589,
+      "tag": "0001_moaning_clea",
+      "breakpoints": true
+    }
+  ]
+}

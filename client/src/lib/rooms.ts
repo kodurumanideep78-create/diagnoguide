@@ -1,0 +1,133 @@
+export type Room = {
+  name: string;
+  machine: string;
+  kind: string;
+  wing: "RIGHT" | "LEFT";
+  summary: string;
+  overview: string;
+  process: string[];
+  duration: string;
+  comfort: string;
+  safety: string;
+  machineType: string;
+};
+
+export const rooms: Room[] = [
+  {
+    name: "Digital 3D Mammography",
+    machine: "Bilateral Tomosynthesis",
+    kind: "BREAST IMAGING",
+    wing: "RIGHT",
+    summary: "A focused breast-imaging suite for layered 3D images of breast tissue.",
+    overview: "A mammogram uses low-dose X-rays. Tomosynthesis captures images from several angles and combines them into thin layers for review by a qualified professional.",
+    process: ["A technologist confirms your details and explains positioning.", "Each breast is positioned and briefly compressed for images.", "The technologist checks image quality before you leave."],
+    duration: "About 15–30 minutes in the imaging department",
+    comfort: "Private changing space and a clear explanation before positioning can help. Tell staff if you need a pause or positioning support.",
+    safety: "Compression and low-dose X-rays are part of the exam. Tell your care team if you may be pregnant and follow the facility’s specific instructions.",
+    machineType: "3D breast imaging",
+  },
+  {
+    name: "Pelvic & Transvaginal Diagnostic Ultrasound",
+    machine: "Diagnostic Ultrasound",
+    kind: "PELVIC IMAGING",
+    wing: "LEFT",
+    summary: "Sound-wave imaging used to view pelvic organs; the approach depends on the clinical question.",
+    overview: "An ultrasound transducer sends high-frequency sound waves and receives echoes to create moving images. A transabdominal and/or transvaginal approach may be used when appropriate.",
+    process: ["Staff explain which approach is planned and answer questions.", "A sonographer moves a transducer to collect images.", "Images are reviewed later by a qualified clinician."],
+    duration: "Often 20–45 minutes, depending on the examination",
+    comfort: "You can ask for a step-by-step explanation, a chaperone where available, or a pause. Staff should explain before contact or positioning.",
+    safety: "Ultrasound does not use ionizing radiation. Tell the team about relevant concerns and follow preparation guidance for your appointment.",
+    machineType: "Ultrasound cart",
+  },
+  {
+    name: "Targeted High-Resolution Breast Ultrasound",
+    machine: "High-Resolution Ultrasound",
+    kind: "BREAST IMAGING",
+    wing: "RIGHT",
+    summary: "A targeted, non-ionizing examination that uses sound waves to assess a specific area.",
+    overview: "A handheld transducer sends sound waves through a small region and converts returning echoes into images. It may be used alongside other breast imaging when indicated.",
+    process: ["The area of interest is confirmed with the care team.", "Gel is applied and the transducer is moved over the skin.", "A specialist reviews the saved images after the scan."],
+    duration: "Commonly 15–30 minutes",
+    comfort: "The examination is usually performed with you lying down. Ask for draping, positioning support, or a chaperone if that would help.",
+    safety: "Ultrasound uses sound waves rather than ionizing radiation. It does not by itself determine whether a finding is benign or harmful.",
+    machineType: "High-resolution ultrasound",
+  },
+  {
+    name: "Cervical Liquid-Based Cytology & HPV Screening",
+    machine: "Liquid-Based Cytology & HPV",
+    kind: "LABORATORY",
+    wing: "LEFT",
+    summary: "A specimen-processing room supporting cervical screening and laboratory analysis.",
+    overview: "A sample collected by a trained professional is preserved in a vial. Laboratory staff prepare cells for cytology and may test for high-risk HPV, according to the screening pathway.",
+    process: ["A clinician explains the sample collection and obtains consent.", "The labelled specimen is prepared in the laboratory.", "Results are reported through the appropriate care pathway."],
+    duration: "Sample collection is brief; laboratory turnaround varies",
+    comfort: "A private room, clear consent, appropriate draping, and a pause on request are important. Ask what collection options are available to you.",
+    safety: "Follow the instructions from your clinic. Screening tests do not diagnose every condition; a clinician explains any follow-up that may be needed.",
+    machineType: "Specimen preparation",
+  },
+  {
+    name: "Pelvic MRI 3T",
+    machine: "Wide-Bore 3 Tesla · Quiet Scan",
+    kind: "MAGNETIC RESONANCE",
+    wing: "RIGHT",
+    summary: "A high-detail magnetic resonance examination of the pelvis, planned for your specific indication.",
+    overview: "MRI uses a strong magnetic field and radio-frequency signals—not X-rays—to create detailed soft-tissue images. A 3T system describes magnet strength; scan protocols vary.",
+    process: ["A safety screen checks implants, devices, and metal exposure.", "You lie on the table while the scanner acquires image sequences.", "Staff communicate from the control room and can pause if needed."],
+    duration: "Often 30–60 minutes, depending on the protocol",
+    comfort: "Ask about ear protection, a call button, transfer assistance, or claustrophobia support. The table and bore dimensions vary by scanner.",
+    safety: "The magnetic field requires screening for implants and devices. Contrast, pregnancy considerations, and preparation depend on your protocol and clinician.",
+    machineType: "3 Tesla MRI",
+  },
+  {
+    name: "Ultrasound-Guided Breast Core Needle Biopsy",
+    machine: "Ultrasound-Guided Biopsy",
+    kind: "IMAGE-GUIDED PROCEDURE",
+    wing: "LEFT",
+    summary: "A clinician uses ultrasound guidance to position a needle and collect small tissue samples.",
+    overview: "Real-time ultrasound helps the clinician locate a target. Local anaesthetic is commonly used; the exact device and steps depend on the site and the planned procedure.",
+    process: ["The clinician explains the procedure and confirms consent.", "The skin is cleaned and local anaesthetic may be given.", "Samples are collected, the site is dressed, and after-care is discussed."],
+    duration: "The visit may take about 45–90 minutes",
+    comfort: "Ask who will be present, how privacy is maintained, and how to request a pause. Let the team know if you need mobility or positioning support.",
+    safety: "This is an invasive procedure with possible bleeding, bruising, or infection. Follow the clinician’s medication and after-care instructions.",
+    machineType: "Ultrasound + biopsy device",
+  },
+  {
+    name: "DEXA Bone Mineral Densitometry",
+    machine: "Hip & Spine Densitometry",
+    kind: "BONE HEALTH",
+    wing: "RIGHT",
+    summary: "A low-dose X-ray examination that estimates bone mineral density at selected sites.",
+    overview: "Dual-energy X-ray absorptiometry compares how two low-dose X-ray beams pass through bone and soft tissue. A trained professional interprets the measurement in context.",
+    process: ["You lie on a padded scanning table.", "A scanning arm passes above the selected areas.", "The short acquisition is reviewed and reported by a professional."],
+    duration: "Usually around 10–30 minutes",
+    comfort: "Tell staff if you have pain or difficulty lying flat. Assistance with transfers and comfortable positioning may be available.",
+    safety: "DEXA uses a small amount of ionizing radiation. Tell the team if you may be pregnant and follow site-specific instructions.",
+    machineType: "Bone density scanner",
+  },
+  {
+    name: "Comprehensive Fetal Anatomy & Doppler Ultrasound",
+    machine: "Comprehensive Obstetric Scan",
+    kind: "OBSTETRIC IMAGING",
+    wing: "LEFT",
+    summary: "Ultrasound images and Doppler measurements used in pregnancy when requested by your care team.",
+    overview: "Ultrasound uses sound waves. Doppler techniques assess motion such as blood flow. The views obtained depend on gestational age, fetal position, and the examination protocol.",
+    process: ["A sonographer confirms the scan requested by your care team.", "Images and, when indicated, Doppler measurements are collected.", "Findings are interpreted and communicated through your clinical team."],
+    duration: "Often 30–60 minutes; timing varies by scan",
+    comfort: "You can ask for positioning changes or a break. A full bladder may be requested for some scans; follow your clinic’s instructions.",
+    safety: "Tell your clinician about your questions or concerns. Ultrasound findings require clinical interpretation and are not a stand-alone diagnosis.",
+    machineType: "Obstetric ultrasound",
+  },
+  {
+    name: "Comprehensive Women’s Endocrine & Metabolic Profile",
+    machine: "Endocrine & Metabolic Analyzer",
+    kind: "LABORATORY",
+    wing: "RIGHT",
+    summary: "A laboratory workflow for analysing selected hormone and metabolic measurements from a specimen.",
+    overview: "Depending on the order, laboratory instruments may use immunoassay or other analytical methods to measure components in blood or another specimen.",
+    process: ["A sample is collected and identified using local procedures.", "An analyser processes the specimen using the ordered method.", "A qualified professional reviews and reports results to your care team."],
+    duration: "Sample collection is brief; result timing varies",
+    comfort: "If a blood draw is planned, tell staff about fainting, mobility, or positioning concerns. Follow any fasting or timing instructions from your clinic.",
+    safety: "The tests ordered and their interpretation depend on your clinician’s question. Do not change medication or preparation without professional advice.",
+    machineType: "Clinical laboratory analyser",
+  },
+];
